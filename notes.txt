@@ -1,0 +1,16 @@
+how to get it running:
+heroku config:set WEB_CONCURRENCY=3 --app cowsay-westerhem (not sure if needed)
+heroku ps:scale web=1 --app cowsay-westerhem (not sure if needed)
+heroku container:push web --app cowsay-westerhem && heroku container:release web --app cowsay-westerhem && heroku open --app cowsay-westerhem && heroku logs --tail --app cowsay-westerhem
+
+app.py hello:app (app.py with gunicorn)
+
+$PORT has internal heroku PORT that goes out to port 80 for the frontend
+
+basics:
+https://medium.com/travis-on-docker/how-to-run-dockerized-apps-on-heroku-and-its-pretty-great-76e07e610e22
+https://sfdcbrewery.github.io/SalesforceDockerXHeroku/
+https://devcenter.heroku.com/articles/container-registry-and-runtime#building-and-pushing-image-s
+
+getting it stable/prod like:
+https://devcenter.heroku.com/articles/python-gunicorn
