@@ -6,6 +6,8 @@ RUN apt-get install cowsay -y
 WORKDIR /var/www/app
 COPY ./ /var/www/app
 
+ENV COWSAYPATH='/usr/games/cowsay'
+
 RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python" ]
