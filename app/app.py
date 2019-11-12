@@ -18,7 +18,7 @@ def hello(name):
         verb = verb_singular
         noun = name
 
-    param = "{} {} in hilversum.".format(noun, verb)
+    param = "{} {} in Hilversum.".format(noun, verb)
     result = subprocess.run([COWSAY_BINARY_PATH, param], stdout=subprocess.PIPE)
     formatted_result = result.stdout.decode('utf-8')
 

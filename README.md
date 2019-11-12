@@ -12,7 +12,7 @@ with this:
 
 ```
  ________________________
-< Wij zijn in hilversum. >
+< Wij zijn in Hilversum. >
  ------------------------
         \   ^__^
          \  (oo)\_______
@@ -26,7 +26,7 @@ and to a call with ```https://xxx.org/<name>``` with
 
 ```
  ________________________
-< <name> is in hilversum. >
+< <name> is in Hilversum. >
  ------------------------
         \   ^__^
          \  (oo)\_______
