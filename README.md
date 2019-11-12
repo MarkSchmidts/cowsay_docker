@@ -4,9 +4,16 @@ Passing and parametrizing the unix command cowsay to render as HTML with Flask. 
 The app output is in Dutch, of course.
 
 ## Requirements
-Python, Docker
+Python, Docker, Docker-Compose
 
-## API:
+## DEV API
+Run ```docker-compose up``` to build and start the service locally with python code autoreload.
+
+Run ```docker-compose run cowsay serve``` to start 'production' server.
+
+Run ```docker-compose run cowsay <any command>``` to execute any binary in the container. F.e. execute the bash with ```docker-compose run cowsay /bin/bash```.
+
+## HTTP API
 Cowsay server hosted on xxx.org answers to a call to ```https://xxx.org/```
 with this:
 
@@ -34,3 +41,5 @@ and to a call with ```https://xxx.org/<name>``` with
                 ||----w |
                 ||     ||
 ```
+
+ 
