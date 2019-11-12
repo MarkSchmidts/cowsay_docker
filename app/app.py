@@ -1,14 +1,11 @@
-import subprocess
 from flask import Flask, render_template
-import os
+from settings import COWSAY_BINARY_PATH
+import subprocess
 app = Flask(__name__)
 
 noun_plural = 'Wij'
 verb_plural = 'zijn'
 verb_singular = 'is'
-
-PORT = int(os.environ.get('PORT', 5000))
-COWSAY_BINARY_PATH = os.environ.get('COWSAYPATH', '/usr/games/cowsay')
 
 
 @app.route('/', defaults={'name': None})
@@ -26,7 +23,3 @@ def hello(name):
     formatted_result = result.stdout.decode('utf-8')
 
     return render_template('template.html', cowsay_stdout=formatted_result)
-
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=PORT)
